@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repositório de Skills</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --bg-2: #111827;
+        --card: #1f2937;
+        --primary: #38bdf8;
+        --accent: #a78bfa;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --success: #34d399;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, var(--bg), var(--bg-2));
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .logo {
+        font-size: 1.4rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-left: 20px;
+        transition: 0.3s;
+      }
+
+      .nav a:hover {
+        color: var(--text);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 30px;
+        align-items: center;
+        padding: 30px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        line-height: 1.1;
+        margin: 0 0 20px;
+      }
+
+      .highlight {
+        color: var(--primary);
+      }
+
+      .hero p {
+        color: var(--muted);
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 30px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 24px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: transform 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        color: #0b1120;
+      }
+
+      .btn-secondary {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: var(--text);
+      }
+
+      .card {
+        background: rgba(31, 41, 55, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        padding: 24px;
+      }
+
+      .stat-box {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .small-card {
+        background: rgba(17, 24, 39, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 14px;
+        padding: 16px;
+      }
+
+      .small-card strong {
+        display: block;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+        color: var(--success);
+      }
+
+      section {
+        margin-top: 60px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+      }
+
+      .skill {
+        background: rgba(17, 24, 39, 0.85);
+        padding: 20px 18px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .skill .icon {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+      }
+
+      .skill h3 {
+        margin: 0 0 8px;
+        font-size: 1.1rem;
+      }
+
+      .skill p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      footer {
+        text-align: center;
+        color: var(--muted);
+        padding-top: 50px;
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        header {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .nav {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">⭐ Repositório de Skills</div>
+        <nav class="nav">
+          <a href="#inicio">Início</a>
+          <a href="#skills">Skills</a>
+          <a href="#sobre">Sobre</a>
+        </nav>
+      </header>
+
+      <main id="inicio" class="hero">
+        <div>
+          <h1>Desenvolva suas <span class="highlight">skills</span> e transforme ideias em projetos.</h1>
+          <p>
+            Este repositório reúne conhecimentos, tecnologias e práticas essenciais para quem quer evoluir em desenvolvimento,
+            programação e tecnologia.
+          </p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="#skills">Ver skills</a>
+            <a class="btn btn-secondary" href="#sobre">Saiba mais</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="stat-box">
+            <div class="small-card">
+              <strong>10+</strong>
+              Skills em destaque
+            </div>
+            <div class="small-card">
+              <strong>100%</strong>
+              Foco em crescimento
+            </div>
+            <div class="small-card">
+              <strong>24/7</strong>
+              Aprendizado contínuo
+            </div>
+            <div class="small-card">
+              <strong>🚀</strong>
+              Projetos prontos
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <section id="skills">
+        <h2 class="section-title">Skills principais</h2>
+        <div class="skills">
+          <div class="skill">
+            <div class="icon">💻</div>
+            <h3>JavaScript</h3>
+            <p>Criação de interfaces e lógica moderna para web.</p>
+          </div>
+          <div class="skill">
+            <div class="icon">🐍</div>
+            <h3>Python</h3>
+            <p>Automação, análise de dados e projetos versáteis.</p>
+          </div>
+          <div class="skill">
+            <div class="icon">⚛️</div>
+            <h3>React</h3>
+            <p>Construção de interfaces interativas e reativas.</p>
+          </div>
+          <div class="skill">
+            <div class="icon">🟩</div>
+            <h3>Node.js</h3>
+            <p>Desenvolvimento de APIs e servidores escaláveis.</p>
+          </div>
+          <div class="skill">
+            <div class="icon">🗄️</div>
+            <h3>SQL</h3>
+            <p>Consultas, organização e manipulação de dados.</p>
+          </div>
+          <div class="skill">
+            <div class="icon">🌐</div>
+            <h3>Git</h3>
+            <p>Controle de versões e colaboração em equipe.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre">
+        <h2 class="section-title">Sobre este projeto</h2>
+        <p style="color: var(--muted); line-height: 1.8; max-width: 800px;">
+          Este repositório foi pensado para servir como base para estudos, práticas e organização de conhecimentos tecnológicos.
+          Aqui você encontra uma visão geral das melhores habilidades que fazem diferença no mercado atual.
+        </p>
+      </section>
+
+      <footer>
+        <p>⭐ TODOS AS MELHORES SKILLS ⭐</p>
+      </footer>
+    </div>
+  </body>
+</html>
